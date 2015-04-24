@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
+import lt.andro.flowr.R;
+
 
 public class NearByShopPostNotificationReceiver extends BroadcastReceiver {
     public static final String CONTENT_KEY = "contentText";
