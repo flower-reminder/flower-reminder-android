@@ -1,0 +1,22 @@
+{
+  "locations": [
+    {
+      "name": "Gėlių turgelis",
+      "address": "Basanavičiaus g. 45, Vilnius",
+      "latitude": "54.680389",
+      "longitude": "25.261585"
+    },
+    {
+      "name": "Galės studija",
+      "address": "Savanorių pr. 16, Vilnius",
+      "latitude": "54.67748",
+      "longitude": "25.255942"
+    },
+    {
+      "name": "ViCUP 2 a.",
+      "address": "Upės g. 16, Vilnius",
+      "latitude": "54.694021",
+      "longitude": "25.277058"
+    }
+  ]
+}
