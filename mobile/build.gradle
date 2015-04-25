@@ -11,6 +11,42 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        release {
+            storeFile file("../keys/flower-reminder.keystore")
+            keyAlias "flowr"
+            if (new File("keys/flower-reminder.properties").exists()) {
+                System.out.println("Using properties file for passwords")
+                Properties props = new Properties()
+                props.load(new FileInputStream(file("../keys/flower-reminder.properties")))
+
+                storePassword props['pass']
+                keyPassword props['pass']
+            } else {
+                System.out.println("Using System.properties for passwords")
+                storePassword System.properties["pass"]
+                keyPassword System.properties["pass"]
+            }
+        }
+        debug {
+            storeFile file("../keys/flower-reminder-debug.keystore")
+            keyAlias "flowr"
+            if (new File("keys/flower-reminder-debug.properties").exists()) {
+                System.out.println("Using properties file for passwords")
+                Properties props = new Properties()
+                props.load(new FileInputStream(file("../keys/flower-reminder-debug.properties")))
+
+                storePassword props['pass']
+                keyPassword props['pass']
+            } else {
+                System.out.println("Using System.properties for passwords")
+                storePassword System.properties["pass"]
+                keyPassword System.properties["pass"]
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -20,7 +56,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     wearApp project(':wear')
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.google.android.gms:play-services:7.0.0'
