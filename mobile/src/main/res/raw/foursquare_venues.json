@@ -1,0 +1,1589 @@
+{
+  "venues": [
+    {
+      "id": "517e8432e4b03bbd892533e0",
+      "name": "Gėlės studija",
+      "contact": {},
+      "location": {
+        "lat": 54.678592825930956,
+        "lng": 25.28302352722242,
+        "distance": 10254,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 18,
+        "usersCount": 8,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "5408121f498e4c676c057a3b",
+      "name": "Gėlės ir manufaktūra",
+      "contact": {},
+      "location": {
+        "address": "Savanoriu Hyper Rimi",
+        "lat": 54.67372506077138,
+        "lng": 25.262495082685927,
+        "distance": 9141,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Savanoriu Hyper Rimi",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 3,
+        "usersCount": 3,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "4fd8b88be4b004e1846a31eb",
+      "name": "Gėlės Ir Manufaktūra",
+      "contact": {
+        "phone": "+37052615161",
+        "formattedPhone": "+370 5 261 5161"
+      },
+      "location": {
+        "address": "Rūdninkų g. 11",
+        "crossStreet": "Ligoninės g. 11",
+        "lat": 54.676461947385555,
+        "lng": 25.283600182363262,
+        "distance": 10072,
+        "postalCode": "01135",
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Rūdninkų g. 11 (Ligoninės g. 11)",
+          "01135 Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 25,
+        "usersCount": 18,
+        "tipCount": 1
+      },
+      "url": "http://www.sododizainas.lt",
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "5246b054498edf9182d4eca7",
+      "name": "Gėlės prie Operos",
+      "contact": {},
+      "location": {
+        "lat": 54.68821716308594,
+        "lng": 25.2769832611084,
+        "distance": 11001,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "5241a57f11d2e0a288c5ff03",
+      "name": "Gėlės ir manufaktūra",
+      "contact": {
+        "phone": "+37061499735",
+        "formattedPhone": "+370 614 99735"
+      },
+      "location": {
+        "address": "Konstitucijos pr. 16",
+        "lat": 54.693729671731354,
+        "lng": 25.275191280582533,
+        "distance": 11503,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Konstitucijos pr. 16",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 4,
+        "usersCount": 3,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "53bfeab1498e2e581dc3d40d",
+      "name": "Geles ir manufaktura",
+      "contact": {},
+      "location": {
+        "address": "Vyduno g. 4",
+        "lat": 54.711377,
+        "lng": 25.185999,
+        "distance": 12431,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Vyduno g. 4",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 3,
+        "usersCount": 1,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "50436b53e4b01c180a2a4212",
+      "name": "Indigo gėlės @ Maxima Bazė",
+      "contact": {},
+      "location": {
+        "address": "Savanorių pr. 247",
+        "lat": 54.656908186012565,
+        "lng": 25.13746554493903,
+        "distance": 7508,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Savanorių pr. 247",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 8,
+        "usersCount": 6,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "5437fc52498eef542ca0c16c",
+      "name": "Indigo Gėlės",
+      "contact": {},
+      "location": {
+        "lat": 54.674679952117515,
+        "lng": 25.202745434370343,
+        "distance": 8315,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "54a7b8c4498e23ff981e16af",
+      "name": "Salonas Gėlės",
+      "contact": {},
+      "location": {
+        "address": "Konarskio 8",
+        "lat": 54.67823028564453,
+        "lng": 25.252885818481445,
+        "distance": 9351,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Konarskio 8",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 1,
+        "usersCount": 1,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "50851d9de4b091f16bca0086",
+      "name": "Ziezmariu Geles",
+      "contact": {},
+      "location": {
+        "lat": 54.713456,
+        "lng": 25.272943,
+        "distance": 13474,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 6,
+        "usersCount": 6,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "550442d6498e8d74c5b81e07",
+      "name": "Beatrices geles",
+      "contact": {},
+      "location": {
+        "address": "Grybo 7",
+        "lat": 54.700209,
+        "lng": 25.313569,
+        "distance": 13339,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Grybo 7",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 1,
+        "usersCount": 1,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "51755e9f498e39cf10b2dcc3",
+      "name": "Žiežmarių gėlės",
+      "contact": {},
+      "location": {
+        "address": "Ozo g.",
+        "lat": 54.7132,
+        "lng": 25.2726,
+        "distance": 13440,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Ozo g.",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 3,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "501d20a7e4b09fbdec206dbb",
+      "name": "Rimi Jeruzales geles",
+      "contact": {},
+      "location": {
+        "lat": 54.79266866446137,
+        "lng": 25.27552844054714,
+        "distance": 21991,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 1,
+        "usersCount": 1,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989443"
+    },
+    {
+      "id": "4fb386e9e4b0271a4c36a2c6",
+      "name": "Gėlių st.",
+      "contact": {},
+      "location": {
+        "address": "Gėlių gatvė",
+        "lat": 54.67486264420212,
+        "lng": 25.283525693686858,
+        "distance": 9920,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Gėlių gatvė",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d12b951735",
+          "name": "Bus Line",
+          "pluralName": "Bus Lines",
+          "shortName": "Bus",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/travel/busstation_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 38,
+        "usersCount": 12,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "532eee93498ea2207a51d681",
+      "name": "Gėlių paviljonas",
+      "contact": {},
+      "location": {
+        "lat": 54.678236793237986,
+        "lng": 25.27816906929757,
+        "distance": 10060,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4fceea171983d5d06c3e9823",
+          "name": "Aquarium",
+          "pluralName": "Aquariums",
+          "shortName": "Aquarium",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/aquarium_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 130,
+        "usersCount": 88,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4c5840f96201e21ed5692c70",
+      "name": "Gėlių turgelis",
+      "contact": {},
+      "location": {
+        "lat": 54.680329782093914,
+        "lng": 25.261522222307438,
+        "distance": 9781,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 561,
+        "usersCount": 273,
+        "tipCount": 4
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "51cd8f4f498e8466c0486dc4",
+      "name": "Gėlių 9 Kirpykla",
+      "contact": {},
+      "location": {
+        "lat": 54.67030966457925,
+        "lng": 25.280557185789068,
+        "distance": 9391,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d110951735",
+          "name": "Salon / Barbershop",
+          "pluralName": "Salons / Barbershops",
+          "shortName": "Salon / Barbershop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/salon_barber_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 1,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "50799684e4b05ac93d17576e",
+      "name": "Gėlių dirbtuvės",
+      "contact": {},
+      "location": {
+        "address": "Čiurlionio g. 4",
+        "lat": 54.6804084777832,
+        "lng": 25.26171112060547,
+        "distance": 9794,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Čiurlionio g. 4",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d1e2931735",
+          "name": "Art Gallery",
+          "pluralName": "Art Galleries",
+          "shortName": "Art Gallery",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/artgallery_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 1,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "552614be498e67de6435513d",
+      "name": "Gėlių grožio centras",
+      "contact": {},
+      "location": {
+        "lat": 54.674511,
+        "lng": 25.283802,
+        "distance": 9896,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "54541900498ea6ccd0202697",
+          "name": "Health & Beauty Service",
+          "pluralName": "Health & Beauty Services",
+          "shortName": "Health & Beauty",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/salon_barber_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 3,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4e7dee4d722eb80200578410",
+      "name": "Geliu Muza",
+      "contact": {},
+      "location": {
+        "address": "Rudininku 18",
+        "lat": 54.675825634462505,
+        "lng": 25.283782951414235,
+        "distance": 10019,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Rudininku 18",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 10,
+        "usersCount": 9,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4fa64fe0e4b094b946f69b7d",
+      "name": "Geliu salonas",
+      "contact": {},
+      "location": {
+        "lat": 54.678490084023835,
+        "lng": 25.2825243706798,
+        "distance": 10227,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 7,
+        "usersCount": 6,
+        "tipCount": 1
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4fbe6f16e4b0bb10a27f976d",
+      "name": "Gėlių Parduotuvė Virš IKI",
+      "contact": {},
+      "location": {
+        "lat": 54.67992229288334,
+        "lng": 25.282876360528892,
+        "distance": 10375,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4e3908d8d4c046ee86b5b724",
+      "name": "Geliu Turgelis",
+      "contact": {},
+      "location": {
+        "lat": 54.68836538121342,
+        "lng": 25.27699474146633,
+        "distance": 11016,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 46,
+        "usersCount": 21,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4e3ac3b2c65b8a6b56b128ac",
+      "name": "Konarskio gėlių turgus",
+      "contact": {},
+      "location": {
+        "address": "Konarskio g.",
+        "lat": 54.680434653938306,
+        "lng": 25.26177633218024,
+        "distance": 9798,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Konarskio g.",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 224,
+        "usersCount": 156,
+        "tipCount": 3
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "500a9a0ae4b0db14bc89e468",
+      "name": "Geliu Turgelis",
+      "contact": {},
+      "location": {
+        "address": "Prie Senuku",
+        "lat": 54.722232,
+        "lng": 25.242839,
+        "distance": 13883,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Prie Senuku",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "509e95dee4b05e06b4ffb609",
+      "name": "Geliu Stilius",
+      "contact": {},
+      "location": {
+        "address": "Jeruzales g. 4",
+        "lat": 54.73973497519881,
+        "lng": 25.274647391643473,
+        "distance": 16280,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Jeruzales g. 4",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 11,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4dd82563e4cd37c893be58f8",
+      "name": "Gėlių namai @Maxima",
+      "contact": {},
+      "location": {
+        "address": "Ukmergės 282",
+        "lat": 54.72769328279489,
+        "lng": 25.239200592041016,
+        "distance": 14436,
+        "postalCode": "07004",
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Ukmergės 282",
+          "07004 Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 17,
+        "usersCount": 4,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "518df62a498e1272075c21a7",
+      "name": "Tauro gėlių turgelis",
+      "contact": {},
+      "location": {
+        "lat": 54.688176795349456,
+        "lng": 25.2683451652731,
+        "distance": 10757,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 5,
+        "usersCount": 4,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "524d9e6c11d2e7adb71d955f",
+      "name": "Geliu kioskas prie IKI Jeruzale",
+      "contact": {},
+      "location": {
+        "lat": 54.742113709296135,
+        "lng": 25.276302571569435,
+        "distance": 16564,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4f577df5e4b0279d3f429ce5",
+      "name": "Šeškinės gėlių turgus",
+      "contact": {},
+      "location": {
+        "address": "Šeškinės g.",
+        "lat": 54.71533574117016,
+        "lng": 25.243786194215282,
+        "distance": 13144,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Šeškinės g.",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 105,
+        "usersCount": 72,
+        "tipCount": 1
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "531b4629498ec8d7f9d6be4b",
+      "name": "Pilaitės gėlių parduotuvė",
+      "contact": {},
+      "location": {
+        "lat": 54.70800393965509,
+        "lng": 25.18323133791398,
+        "distance": 12071,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "5097a9e5498e4ddf69987aad",
+      "name": "Geliu Pieva",
+      "contact": {},
+      "location": {
+        "address": "Mokslininku g. 9",
+        "lat": 54.754067324182856,
+        "lng": 25.264370310564964,
+        "distance": 17643,
+        "cc": "LT",
+        "city": "Vilnius",
+        "state": "Vilniaus Apskritis",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Mokslininku g. 9",
+          "Vilnius",
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 26,
+        "usersCount": 7,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "4fc88364e4b005dcbe773189",
+      "name": "Verkiu Geliu  Turgus",
+      "contact": {},
+      "location": {
+        "lat": 54.712368935124324,
+        "lng": 25.296543906021085,
+        "distance": 13968,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 112,
+        "usersCount": 69,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989600"
+    },
+    {
+      "id": "511a1ec1e4b0d2e913b3bf2a",
+      "name": "Floristika",
+      "contact": {},
+      "location": {
+        "lat": 54.629957,
+        "lng": 25.256417,
+        "distance": 4934,
+        "cc": "LT",
+        "country": "Lithuania",
+        "formattedAddress": [
+          "Lithuania"
+        ]
+      },
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d11b951735",
+          "name": "Flower Shop",
+          "pluralName": "Flower Shops",
+          "shortName": "Flower Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/flowershop_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "checkinsCount": 2,
+        "usersCount": 2,
+        "tipCount": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "referralId": "v-1429989770"
+    }
+  ]
+}

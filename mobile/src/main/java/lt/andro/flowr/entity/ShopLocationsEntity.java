@@ -7,5 +7,5 @@ import java.util.List;
  * @since 2015-04-25 05:34.
  */
 public class ShopLocationsEntity {
-    public List<ShopLocation> locations;
+    public List<MyShopLocation> locations;
 }

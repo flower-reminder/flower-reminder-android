@@ -3,7 +3,7 @@ package lt.andro.flowr;
 import java.util.List;
 
 import lt.andro.flowr.entity.ShopLocation;
-import lt.andro.flowr.entity.ShopLocationsEntity;
+import lt.andro.flowr.entity.foursquare.FoursquareVenues;
 import lt.andro.flowr.utils.FileUtils;
 import lt.andro.flowr.utils.GsonUtils;
 
@@ -14,15 +14,14 @@ import lt.andro.flowr.utils.GsonUtils;
 public class FlowerShopsLocations {
 
     static transient FlowerShopsLocations instance;
-    private final List<ShopLocation> locations;
+    private final List<? extends ShopLocation> locations;
 
     public FlowerShopsLocations() {
-        String locationsJson = FileUtils.readFile(R.raw.shop_locations);
-        locations = GsonUtils.gson.fromJson(locationsJson, ShopLocationsEntity.class).locations;
-    }
+//        String locationsJson = FileUtils.readFile(R.raw.shop_locations);
+//        locations = GsonUtils.gson.fromJson(locationsJson, ShopLocationsEntity.class).locations;
 
-    public List<ShopLocation> getLocations() {
-        return locations;
+        String locationsJson = FileUtils.readFile(R.raw.foursquare_venues);
+        locations = GsonUtils.gson.fromJson(locationsJson, FoursquareVenues.class).getLocations();
     }
 
     public static FlowerShopsLocations getInstance() {
@@ -30,5 +29,9 @@ public class FlowerShopsLocations {
             instance = new FlowerShopsLocations();
         }
         return instance;
+    }
+
+    public List<? extends ShopLocation> getLocations() {
+        return locations;
     }
 }
