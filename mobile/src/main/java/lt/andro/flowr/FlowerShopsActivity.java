@@ -1,22 +1,51 @@
 package lt.andro.flowr;
 
-import android.support.v4.app.FragmentActivity;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.List;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import lt.andro.flowr.entity.ShopLocation;
+import timber.log.Timber;
+
 public class FlowerShopsActivity extends FragmentActivity {
 
+    @InjectView(R.id.activity_flower_shops_enable_button)
+    ToggleButton enableToggleButton;
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+    private GoogleApiClient mGoogleApiClient;
+    private Location mLastLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flower_shops);
         setUpMapIfNeeded();
+        buildGoogleApiClient();
+        ButterKnife.inject(this);
+
+        enableToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Timber.d("isChecked", isChecked);
+            }
+        });
     }
 
     @Override
@@ -44,13 +73,40 @@ public class FlowerShopsActivity extends FragmentActivity {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.activity_flower_shops_map))
                     .getMap();
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
             }
         }
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
+                    @Override
+                    public void onConnected(Bundle bundle) {
+                        Timber.d("connected");
+                        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                                mGoogleApiClient);
+                        showLastLocation();
+                    }
+
+                    @Override
+                    public void onConnectionSuspended(int i) {
+                        Timber.d("suspended");
+                    }
+                })
+                .addOnConnectionFailedListener(new GoogleApiClient.OnConnectionFailedListener() {
+                    @Override
+                    public void onConnectionFailed(ConnectionResult connectionResult) {
+                        Timber.d("failed");
+                    }
+                })
+                .addApi(LocationServices.API)
+                .build();
+        mGoogleApiClient.connect();
     }
 
     /**
@@ -60,6 +116,30 @@ public class FlowerShopsActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        List<ShopLocation> locations = FlowerShopsLocations.getInstance().getLocations();
+        for (ShopLocation location : locations) {
+            float lat = location.latitude;
+            float lon = location.longitude;
+            mMap.addMarker(new MarkerOptions()
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_pin))
+                    .anchor(0.0f, 1.0f) // Anchors the marker on the bottom left
+                    .position(new LatLng(lat, lon)));
+            mMap.addCircle(new CircleOptions()
+                    .center(new LatLng(lat, lon))
+                    .radius(50)
+                    .strokeColor(0)
+                    .fillColor(getResources().getColor(R.color.area_fill)));
+        }
+
+        LatLng vilnius = new LatLng(54.694021, 25.277058);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(vilnius, 13));
+    }
+
+    private void showLastLocation() {
+        if (mLastLocation != null) {
+            if (mMap != null) {
+                mMap.addMarker(new MarkerOptions().position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude())).title("Last known location"));
+            }
+        }
     }
 }

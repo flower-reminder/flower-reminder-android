@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FlowR</string>
     <string name="title_activity_flower_shops">Flower shops</string>
+    <string name="geofence_transition_invalid_type">geofence transition %d is not valid</string>
 </resources>
