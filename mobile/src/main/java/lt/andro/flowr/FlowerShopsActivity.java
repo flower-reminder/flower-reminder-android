@@ -24,7 +24,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.ButterKnife;
-import lt.andro.flowr.entity.ShopLocation;
+import lt.andro.flowr.location.FlowerShopsLocations;
+import lt.andro.flowr.location.entity.ShopLocation;
 import timber.log.Timber;
 
 public class FlowerShopsActivity extends FragmentActivity implements ResultCallback<Status> {
@@ -183,13 +184,13 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         return mGeofencePendingIntent;
     }
 
-    private void removeGeofences() {
-        LocationServices.GeofencingApi.removeGeofences(
-                mGoogleApiClient,
-                // This is the same pending intent that was used in addGeofences().
-                getGeofencePendingIntent()
-        ).setResultCallback(this); // Result processed in onResult().
-    }
+//    private void removeGeofences() {
+//        LocationServices.GeofencingApi.removeGeofences(
+//                mGoogleApiClient,
+//                // This is the same pending intent that was used in addGeofences().
+//                getGeofencePendingIntent()
+//        ).setResultCallback(this); // Result processed in onResult().
+//    }
 
     @Override
     public void onResult(Status status) {

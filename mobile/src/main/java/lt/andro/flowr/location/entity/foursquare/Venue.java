@@ -1,7 +1,7 @@
-package lt.andro.flowr.entity.foursquare;
+package lt.andro.flowr.location.entity.foursquare;
 
 import lt.andro.flowr.FlowerShopsLocations;
-import lt.andro.flowr.entity.ShopLocation;
+import lt.andro.flowr.location.entity.ShopLocation;
 
 /**
  * @author Vilius Kraujutis

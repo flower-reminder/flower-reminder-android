@@ -1,4 +1,4 @@
-package lt.andro.flowr.entity;
+package lt.andro.flowr.location.entity;
 
 import java.util.List;
 

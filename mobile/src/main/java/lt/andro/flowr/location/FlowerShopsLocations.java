@@ -1,9 +1,10 @@
-package lt.andro.flowr;
+package lt.andro.flowr.location;
 
 import java.util.List;
 
-import lt.andro.flowr.entity.ShopLocation;
-import lt.andro.flowr.entity.foursquare.FoursquareVenues;
+import lt.andro.flowr.R;
+import lt.andro.flowr.location.entity.ShopLocation;
+import lt.andro.flowr.location.entity.foursquare.FoursquareVenues;
 import lt.andro.flowr.utils.FileUtils;
 import lt.andro.flowr.utils.GsonUtils;
 

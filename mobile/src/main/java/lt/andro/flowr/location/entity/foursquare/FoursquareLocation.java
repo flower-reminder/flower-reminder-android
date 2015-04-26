@@ -1,4 +1,4 @@
-package lt.andro.flowr.entity.foursquare;
+package lt.andro.flowr.location.entity.foursquare;
 
 /**
  * @author Vilius Kraujutis
