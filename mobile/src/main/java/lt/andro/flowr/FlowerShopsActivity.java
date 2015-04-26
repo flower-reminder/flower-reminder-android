@@ -2,11 +2,8 @@ package lt.andro.flowr;
 
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.widget.CompoundButton;
-import android.widget.ToggleButton;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -14,70 +11,69 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import lt.andro.flowr.entity.ShopLocation;
 import timber.log.Timber;
 
 public class FlowerShopsActivity extends FragmentActivity implements ResultCallback<Status> {
 
-    public static final int RADIUS = 200;
-    @InjectView(R.id.activity_flower_shops_enable_button)
-    ToggleButton enableToggleButton;
+    public static final int RADIUS_IN_METERS = 200;
+    public static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS = TimeUnit.MINUTES.toMillis(10);
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private GoogleApiClient mGoogleApiClient;
-    private Location mLastLocation;
-    private ArrayList<Geofence> mGeofenceList = new ArrayList<>();
+    private ArrayList<Geofence> mGeofencesList = new ArrayList<>();
     private PendingIntent mGeofencePendingIntent;
     private LocationRequest mLocationRequest;
-    private Marker lastLocationMarker;
+    private Marker mLastLocationMarker;
+    private List<? extends ShopLocation> mLocations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flower_shops);
-
-        setUpMapIfNeeded();
-        buildGoogleApiClient();
         ButterKnife.inject(this);
 
+        mLocations = FlowerShopsLocations.getInstance().getLocations();
         createGeofenceList();
-        createLocationRequest();
+        setUpMapIfNeeded();
 
-        enableToggleButton.setChecked(true);
-        enableToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Timber.d("isChecked", isChecked);
-                if (isChecked) {
-                    addGeofences();
-                } else {
-                    removeGeofences();
-                }
-            }
-        });
+        createLocationRequest();
+        connectGoogleApiClient();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
+    }
+
+    private void createGeofenceList() {
+        for (ShopLocation location : mLocations) {
+            float lat = location.getLatitude();
+            float lon = location.getLongitude();
+            mGeofencesList.add(new Geofence.Builder()
+                    // Set the request ID of the geofence. This is a string to identify this geofence.
+                    .setRequestId(Integer.toString(location.getId()))
+                    .setCircularRegion(lat, lon, RADIUS_IN_METERS)
+                    .setExpirationDuration(GEOFENCE_EXPIRATION_IN_MILLISECONDS)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER)
+                    .build());
+        }
     }
 
     /**
@@ -108,42 +104,19 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         }
     }
 
-    /**
-     * This is where we can add markers or lines, add listeners or move the camera. In this case, we
-     * just add a marker near Africa.
-     * <p/>
-     * This should only be called once and when we are sure that {@link #mMap} is not null.
-     */
-    private void setUpMap() {
-        List<? extends ShopLocation> locations = FlowerShopsLocations.getInstance().getLocations();
-        for (ShopLocation location : locations) {
-            float lat = location.getLatitude();
-            float lon = location.getLongitude();
-            mMap.addMarker(new MarkerOptions()
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_pin))
-                    .anchor(.5f, 1.0f)
-                    .position(new LatLng(lat, lon)));
-            mMap.addCircle(new CircleOptions()
-                    .center(new LatLng(lat, lon))
-                    .radius(RADIUS)
-                    .strokeColor(0)
-                    .fillColor(getResources().getColor(R.color.area_fill)));
-        }
-
-        LatLng vilnius = new LatLng(54.694021, 25.277058);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(vilnius, 16));
+    protected void createLocationRequest() {
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(1000);
+        mLocationRequest.setFastestInterval(500);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
-    protected synchronized void buildGoogleApiClient() {
+    protected synchronized void connectGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
                     @Override
                     public void onConnected(Bundle bundle) {
                         Timber.d("connected");
-                        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
-                                mGoogleApiClient);
-                        showLastLocation();
-                        monitorLocationChanges();
                         addGeofences();
                     }
 
@@ -163,27 +136,36 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         mGoogleApiClient.connect();
     }
 
-    private void createGeofenceList() {
-        List<? extends ShopLocation> locations = FlowerShopsLocations.getInstance().getLocations();
-        for (ShopLocation location : locations) {
-            float lat = location.getLatitude();
-            float lon = location.getLongitude();
-            mGeofenceList.add(new Geofence.Builder()
-                    // Set the request ID of the geofence. This is a string to identify this
-                    // geofence.
-                    .setRequestId(Integer.toString(location.getId()))
-                    .setCircularRegion(lat, lon, RADIUS)
-                    .setExpirationDuration(Constants.GEOFENCE_EXPIRATION_IN_MILLISECONDS)
-                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER)
-                    .build());
-        }
+    /**
+     * This is where we can add markers or lines, add listeners or move the camera. In this case, we
+     * just add a marker near Africa.
+     * <p/>
+     * This should only be called once and when we are sure that {@link #mMap} is not null.
+     */
+    private void setUpMap() {
+        addShopLocations();
+
+        LatLng vicup = new LatLng(54.694021, 25.277058);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(vicup, 16));
+
+        mMap.setMyLocationEnabled(true);
     }
 
-    protected void createLocationRequest() {
-        mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(1000);
-        mLocationRequest.setFastestInterval(500);
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+    private void addShopLocations() {
+        for (ShopLocation location : mLocations) {
+            float lat = location.getLatitude();
+            float lon = location.getLongitude();
+            mMap.addMarker(new MarkerOptions()
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_pin))
+                    .anchor(.5f, 1.0f)
+                    .position(new LatLng(lat, lon)));
+//            if (BuildConfig.DEBUG)
+//                mMap.addCircle(new CircleOptions()
+//                        .center(new LatLng(lat, lon))
+//                        .radius(RADIUS_IN_METERS)
+//                        .strokeColor(0)
+//                        .fillColor(getResources().getColor(R.color.area_fill)));
+        }
     }
 
     private void addGeofences() {
@@ -194,39 +176,10 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         ).setResultCallback(this);
     }
 
-    private void removeGeofences() {
-        LocationServices.GeofencingApi.removeGeofences(
-                mGoogleApiClient,
-                // This is the same pending intent that was used in addGeofences().
-                getGeofencePendingIntent()
-        ).setResultCallback(this); // Result processed in onResult().
-    }
-
-    private void showLastLocation() {
-        if (mLastLocation != null) {
-            if (mMap != null) {
-                if (lastLocationMarker != null) lastLocationMarker.remove();
-                lastLocationMarker = mMap.addMarker(new MarkerOptions().position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude())).title("Last known location"));
-            }
-        }
-    }
-
-    private void monitorLocationChanges() {
-        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, new LocationListener() {
-            @Override
-            public void onLocationChanged(Location location) {
-                if (location == null) return;
-
-                mLastLocation = location;
-                showLastLocation();
-            }
-        });
-    }
-
     private GeofencingRequest getGeofencingRequest() {
         GeofencingRequest.Builder builder = new GeofencingRequest.Builder();
         builder.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
-        builder.addGeofences(mGeofenceList);
+        builder.addGeofences(mGeofencesList);
         return builder.build();
     }
 
@@ -238,7 +191,16 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         Intent intent = new Intent(this, GeofenceTransitionsIntentService.class);
         // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when
         // calling addGeofences() and removeGeofences().
-        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        mGeofencePendingIntent = PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return mGeofencePendingIntent;
+    }
+
+    private void removeGeofences() {
+        LocationServices.GeofencingApi.removeGeofences(
+                mGoogleApiClient,
+                // This is the same pending intent that was used in addGeofences().
+                getGeofencePendingIntent()
+        ).setResultCallback(this); // Result processed in onResult().
     }
 
     @Override
