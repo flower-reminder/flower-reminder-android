@@ -3,4 +3,8 @@
     <string name="title_activity_flower_shops">Flower Reminder</string>
     <string name="geofence_transition_invalid_type">Error! Geofence transition %d is not valid.</string>
     <string name="current_location_title">Current location</string>
+    <string name="geofence_transition_notification_text">Don\'t forget to by flowers!</string>
+    <string name="geofence_transition_entered">entered</string>
+    <string name="geofence_transition_exited">exit</string>
+    <string name="unknown_geofence_transition">unknown transition</string>
 </resources>
