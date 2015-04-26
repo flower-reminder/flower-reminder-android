@@ -7,4 +7,5 @@
     <string name="geofence_transition_entered">entered</string>
     <string name="geofence_transition_exited">exit</string>
     <string name="unknown_geofence_transition">unknown transition</string>
+    <string name="notification_get_directions">Directions</string>
 </resources>

@@ -20,11 +20,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.ButterKnife;
-import lt.andro.flowr.location.FlowerShopsLocations;
 import lt.andro.flowr.location.entity.ShopLocation;
 import timber.log.Timber;
 
@@ -32,12 +30,10 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
 
     public static final int RADIUS_IN_METERS = 300;
     public static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS = TimeUnit.MINUTES.toMillis(10);
-
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private GoogleApiClient mGoogleApiClient;
     private ArrayList<Geofence> mGeofencesList = new ArrayList<>();
     private PendingIntent mGeofencePendingIntent;
-    private List<? extends ShopLocation> mLocations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +41,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         setContentView(R.layout.activity_flower_shops);
         ButterKnife.inject(this);
 
-        mLocations = FlowerShopsLocations.getInstance().getLocations();
         createGeofenceList();
         setUpMapIfNeeded();
 
@@ -59,7 +54,7 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
     }
 
     private void createGeofenceList() {
-        for (ShopLocation location : mLocations) {
+        for (ShopLocation location : MainApplication.locations) {
             float lat = location.getLatitude();
             float lon = location.getLongitude();
             mGeofencesList.add(new Geofence.Builder()
@@ -149,7 +144,7 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
     }
 
     private void addShopLocations() {
-        for (ShopLocation location : mLocations) {
+        for (ShopLocation location : MainApplication.locations) {
             float lat = location.getLatitude();
             float lon = location.getLongitude();
             mMap.addMarker(new MarkerOptions()
