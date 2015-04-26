@@ -30,7 +30,7 @@ import timber.log.Timber;
 
 public class FlowerShopsActivity extends FragmentActivity implements ResultCallback<Status> {
 
-    public static final int RADIUS_IN_METERS = 200;
+    public static final int RADIUS_IN_METERS = 300;
     public static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS = TimeUnit.MINUTES.toMillis(10);
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.

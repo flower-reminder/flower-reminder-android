@@ -1,6 +1,6 @@
 package lt.andro.flowr.location.entity;
 
-import lt.andro.flowr.FlowerShopsLocations;
+import lt.andro.flowr.location.FlowerShopsLocations;
 
 /**
  * @author Vilius Kraujutis
