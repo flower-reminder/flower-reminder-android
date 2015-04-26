@@ -15,3 +15,63 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-optimizationpasses 5
+-dontpreverify
+-verbose
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*,!code/allocation/variable
+
+
+-allowaccessmodification
+-repackageclasses ''
+
+
+-dontwarn javax.**
+
+
+# Google Play Services
+# start
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+# end
+
+-dontwarn butterknife.internal.**
+-keep class **$$ViewInjector { *; }
+-keepnames class * { @butterknife.InjectView *;}
+
+-dontwarn com.squareup.okhttp.**
+-dontwarn javax.annotation.**
+-dontwarn sun.misc.Unsafe
+-dontwarn android.support.**
+
+-keep class android.support.v7.internal.** { *; }
+-keep interface android.support.v7.internal.** { *; }
+-keep class android.support.v7.** { *; }
+-keep interface android.support.v7.** { *; }
+
+-keepattributes *Annotation*, Signature, SourceFile, LineNumberTable
+
+-keep class sun.misc.Unsafe { *; }
+
+-keep class com.google.gson.** { *; }
+-keep class com.google.inject.** { *; }
+-keep class org.apache.http.** { *; }
+
+-dontwarn com.google.android.gms.**
