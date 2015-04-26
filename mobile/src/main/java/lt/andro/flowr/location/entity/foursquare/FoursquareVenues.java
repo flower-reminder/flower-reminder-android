@@ -3,6 +3,7 @@ package lt.andro.flowr.location.entity.foursquare;
 import java.util.ArrayList;
 import java.util.List;
 
+import lt.andro.flowr.location.FlowerShopsLocations;
 import lt.andro.flowr.location.entity.ShopLocation;
 
 /**
@@ -38,7 +39,7 @@ public class FoursquareVenues {
 
             @Override
             public int getId() {
-                return venue.getId();
+                return FlowerShopsLocations.getInstance().getLocations().indexOf(this);
             }
         };
     }
