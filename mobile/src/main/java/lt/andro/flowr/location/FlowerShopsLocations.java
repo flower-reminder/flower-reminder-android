@@ -15,7 +15,7 @@ import lt.andro.flowr.utils.GsonUtils;
 public class FlowerShopsLocations {
 
     static transient FlowerShopsLocations instance;
-    private final List<? extends ShopLocation> locations;
+    private final List<ShopLocation> locations;
 
     public FlowerShopsLocations() {
 //        String locationsJson = FileUtils.readFile(R.raw.shop_locations);
@@ -32,7 +32,7 @@ public class FlowerShopsLocations {
         return instance;
     }
 
-    public List<? extends ShopLocation> getLocations() {
+    public List<ShopLocation> getLocations() {
         return locations;
     }
 }

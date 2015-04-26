@@ -33,7 +33,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private GoogleApiClient mGoogleApiClient;
     private ArrayList<Geofence> mGeofencesList = new ArrayList<>();
-    private PendingIntent mGeofencePendingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         createGeofenceList();
         setUpMapIfNeeded();
 
-        connectGoogleApiClient();
+        createGoogleApiClient();
     }
 
     @Override
@@ -95,7 +94,7 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         }
     }
 
-    protected synchronized void connectGoogleApiClient() {
+    protected synchronized void createGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
                     @Override
@@ -117,7 +116,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
                 })
                 .addApi(LocationServices.API)
                 .build();
-        mGoogleApiClient.connect();
     }
 
     /**
@@ -168,15 +166,10 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
     }
 
     private PendingIntent getGeofencePendingIntent() {
-        // Reuse the PendingIntent if we already have it.
-        if (mGeofencePendingIntent != null) {
-            return mGeofencePendingIntent;
-        }
         Intent intent = new Intent(this, GeofenceTransitionsIntentService.class);
         // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when
         // calling addGeofences() and removeGeofences().
-        mGeofencePendingIntent = PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        return mGeofencePendingIntent;
+        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
 //    private void removeGeofences() {
@@ -191,4 +184,16 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
     public void onResult(Status status) {
         Timber.d("onResult");
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mGoogleApiClient.disconnect();
+    }
+
 }

@@ -14,7 +14,7 @@ import timber.log.Timber;
  */
 public class MainApplication extends Application {
     public static Application context;
-    public static List<? extends ShopLocation> locations;
+    public static List<ShopLocation> locations;
 
     @Override
     public void onCreate() {
