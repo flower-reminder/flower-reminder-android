@@ -11,14 +11,12 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
-import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -38,8 +36,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
     private GoogleApiClient mGoogleApiClient;
     private ArrayList<Geofence> mGeofencesList = new ArrayList<>();
     private PendingIntent mGeofencePendingIntent;
-    private LocationRequest mLocationRequest;
-    private Marker mLastLocationMarker;
     private List<? extends ShopLocation> mLocations;
 
     @Override
@@ -52,7 +48,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         createGeofenceList();
         setUpMapIfNeeded();
 
-        createLocationRequest();
         connectGoogleApiClient();
     }
 
@@ -104,13 +99,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         }
     }
 
-    protected void createLocationRequest() {
-        mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(1000);
-        mLocationRequest.setFastestInterval(500);
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-    }
-
     protected synchronized void connectGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
@@ -151,6 +139,14 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
         mMap.setMyLocationEnabled(true);
     }
 
+    private void addGeofences() {
+        LocationServices.GeofencingApi.addGeofences(
+                mGoogleApiClient,
+                getGeofencingRequest(),
+                getGeofencePendingIntent()
+        ).setResultCallback(this);
+    }
+
     private void addShopLocations() {
         for (ShopLocation location : mLocations) {
             float lat = location.getLatitude();
@@ -166,14 +162,6 @@ public class FlowerShopsActivity extends FragmentActivity implements ResultCallb
 //                        .strokeColor(0)
 //                        .fillColor(getResources().getColor(R.color.area_fill)));
         }
-    }
-
-    private void addGeofences() {
-        LocationServices.GeofencingApi.addGeofences(
-                mGoogleApiClient,
-                getGeofencingRequest(),
-                getGeofencePendingIntent()
-        ).setResultCallback(this);
     }
 
     private GeofencingRequest getGeofencingRequest() {
